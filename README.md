@@ -1,5 +1,88 @@
 # TranscriptProcessor
 
+## Prerequisites
+
+### Required Tools
+
+1. **yt-dlp** - YouTube downloader
+2. **jq** - JSON processor (for playlist handling)
+3. **Standard Unix tools** - grep, sed, awk (included on macOS/Linux)
+
+### Installation Commands
+
+**macOS (using Homebrew):**
+
+```bash
+# Install Homebrew if you don't have it
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Install required tools
+brew install yt-dlp jq
+```
+
+**Ubuntu/Debian Linux:**
+
+```bash
+sudo apt update
+sudo apt install yt-dlp jq
+```
+
+**Other Linux distributions:**
+
+```bash
+# Install yt-dlp via pip
+pip install yt-dlp
+
+# Install jq (varies by distro)
+# Fedora: sudo dnf install jq
+# Arch: sudo pacman -S jq
+# CentOS: sudo yum install jq
+```
+
+## Installation
+
+### Step 1: Download the Script
+
+Save the batch processor script to a file called `youtube-transcripts.sh`:
+
+```bash
+# Create the script file
+touch ~/youtube-transcripts.sh
+chmod +x ~/youtube-transcripts.sh
+
+# Copy the script content into the file using your preferred editor
+# (The script content is provided in the previous artifact)
+```
+
+### Step 2: Add to Your Shell
+
+**For Zsh (default on macOS):**
+
+```bash
+# Add to your .zshrc
+echo "source ~/youtube-transcripts.sh" >> ~/.zshrc
+
+# Reload your shell
+source ~/.zshrc
+```
+
+**For Bash:**
+
+```bash
+# Add to your .bashrc or .bash_profile
+echo "source ~/youtube-transcripts.sh" >> ~/.bashrc
+
+# Reload your shell
+source ~/.bashrc
+```
+
+### Step 3: Verify Installation
+
+```bash
+# Test that commands are available
+batch-transcripts
+# Should show usage information
+
 ## Commands:
  
 ### Single Video Processing
